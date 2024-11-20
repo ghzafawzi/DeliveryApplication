@@ -1,63 +1,47 @@
 <style>
-  .f{
+  .f {
     text-align: center;
   }
-  ion-segment{
+  ion-segment {
     margin-top: 100px;
   }
-  ion-input{
+  ion-input, ion-select {
     text-align: center;
   }
-
- 
-  
 </style>
 <ion-card color="primary">
   <ion-card-header>
-    <ion-card-title class="f" ><h1>Delivrery</h1></ion-card-title>
-    
+    <ion-card-title class="f"><h1>Delivrery</h1></ion-card-title>
   </ion-card-header>
-
   <ion-card-content class="f">
     keeping touch with your stuff
   </ion-card-content>
 </ion-card>
 
-
-
-
 <ion-content class="i">
   <ion-segment>
-    <ion-segment-button routerLink="/sing-up"  value="Sing-up" content-id="Sing-up">
+    <ion-segment-button  value="Sing-up" content-id="Sing-up">
       Sing up
     </ion-segment-button>
     <ion-segment-button routerLink="/login" content-id="login">
       <ion-label>log in</ion-label>
     </ion-segment-button>
-    
-    <ion-list>
-      <ion-item>
-        <ion-select aria-label="list" class="s" >
-          <ion-select-option value="administrateur">administrateur</ion-select-option>
-          <ion-select-option value="client">client</ion-select-option>
-          <ion-select-option value="livreur">livreur</ion-select-option>
-          <ion-select-option value="fournisseur">fournisseur</ion-select-option>
-
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    
   </ion-segment>
   <br>
-  <ion-input class="t" label=" gmail" label-placement="floating" fill="outline"  placeholder="Enter Email"></ion-input><br>
+  <ion-input [(ngModel)]="email" class="t" label="Email" label-placement="floating" fill="outline" placeholder="Enter Email"></ion-input><br>
+  <ion-input [(ngModel)]="nom" class="t" label="Nom" label-placement="floating" fill="outline" placeholder="Enter Nom"></ion-input><br>
+  <ion-input [(ngModel)]="prenom" class="t" label="Prenom" label-placement="floating" fill="outline" placeholder="Enter Prenom"></ion-input><br>
+  <ion-input [(ngModel)]="password" type="password" class="t" label="Password" label-placement="floating" fill="outline" placeholder="Enter Password"></ion-input><br>
+  <ion-input [(ngModel)]="phoneNumber" class="t" label="Phone Number" label-placement="floating" fill="outline" placeholder="Enter Phone Number"></ion-input><br>
+  <ion-select [(ngModel)]="type" class="t" label="Type" label-placement="floating" fill="outline" placeholder="Select Type">
+    <ion-select-option value="administrateur">Administrateur</ion-select-option>
+    <ion-select-option value="client">Client</ion-select-option>
+    <ion-select-option value="livreur">Livreur</ion-select-option>
+    <ion-select-option value="fournisseur">Fournisseur</ion-select-option>
+  </ion-select><br>
+  <ion-input [(ngModel)]="ville" class="t" label="Ville" label-placement="floating" fill="outline" placeholder="Enter Ville"></ion-input><br>
+</ion-content>
 
-
-  <ion-input type="password" class="t" label="password" label-placement="floating" fill="outline"  placeholder="Enter password"></ion-input><br>
-  <ion-input type="password" class="t" label="password" label-placement="floating" fill="outline"  placeholder="confirmer password"></ion-input><br>
-  <ion-input class="t" label="username" label-placement="floating" fill="outline"  placeholder="Enter username"></ion-input><br>
-
-  </ion-content>
-  
-  
-    
-  
+<footer>
+  <ion-button expand="block" (click)="signUp()">Sign Up</ion-button>
+</footer>
