@@ -1,0 +1,63 @@
+<style>
+  .f{
+    text-align: center;
+  }
+  ion-segment{
+    margin-top: 100px;
+  }
+  ion-input{
+    text-align: center;
+  }
+
+ 
+  
+</style>
+<ion-card color="primary">
+  <ion-card-header>
+    <ion-card-title class="f" ><h1>Delivrery</h1></ion-card-title>
+    
+  </ion-card-header>
+
+  <ion-card-content class="f">
+    keeping touch with your stuff
+  </ion-card-content>
+</ion-card>
+
+
+
+
+<ion-content class="i">
+  <ion-segment>
+    <ion-segment-button routerLink="/sing-up"  value="Sing-up" content-id="Sing-up">
+      Sing up
+    </ion-segment-button>
+    <ion-segment-button routerLink="/login" content-id="login">
+      <ion-label>log in</ion-label>
+    </ion-segment-button>
+    
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="list" class="s" >
+          <ion-select-option value="administrateur">administrateur</ion-select-option>
+          <ion-select-option value="client">client</ion-select-option>
+          <ion-select-option value="livreur">livreur</ion-select-option>
+          <ion-select-option value="fournisseur">fournisseur</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    
+  </ion-segment>
+  <br>
+  <ion-input class="t" label=" gmail" label-placement="floating" fill="outline"  placeholder="Enter Email"></ion-input><br>
+
+
+  <ion-input type="password" class="t" label="password" label-placement="floating" fill="outline"  placeholder="Enter password"></ion-input><br>
+  <ion-input type="password" class="t" label="password" label-placement="floating" fill="outline"  placeholder="confirmer password"></ion-input><br>
+  <ion-input class="t" label="username" label-placement="floating" fill="outline"  placeholder="Enter username"></ion-input><br>
+
+  </ion-content>
+  
+  
+    
+  
