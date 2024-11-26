@@ -23,6 +23,22 @@ const routes: Routes = [
     path: 'livraisons',
     loadChildren: () => import('./livraisons/livraisons.module').then( m => m.LivraisonsPageModule)
   },
+  {
+    path: 'commande',
+    loadChildren: () => import('./commande/commande.module').then( m => m.CommandePageModule)
+  },
+  {
+    path: 'info-historique',
+    loadChildren: () => import('./info-historique/info-historique.module').then( m => m.InfoHistoriquePageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'position',
+    loadChildren: () => import('./position/position.module').then( m => m.PositionPageModule)
+  },
 ];
 
 @NgModule({

@@ -21,6 +21,7 @@ export class SingUpPage implements OnInit {
 
   constructor(private alertController: AlertController) { }
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() { }
 
   async signUp() {
